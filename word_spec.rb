@@ -1,3 +1,8 @@
+$LOAD_PATH << File.dirname(__FILE__)
+
+require 'rspec'
+require 'word.rb'
+
 describe Word do
   describe ".suffix" do
 
@@ -9,15 +14,8 @@ describe Word do
       expect(described_class.suffix("absolutely")).to eq("ly")
     end
 
-  end
-
-  describe ".root" do
-    it "should take 'absoluteness' and return 'absolute'" do
-      expect(described_class.suffix("absoluteness")).to eq("absolute")
-    end
-
-    it "should take 'absolutely' and return 'absolute'" do
-      expect(described_class.suffix("absolutenely")).to eq("absolute")
+    it "should take 'reversible' and return 'ible'" do
+      expect(described_class.suffix("reversible")).to eq("ible")
     end
 
   end
