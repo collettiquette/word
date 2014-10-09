@@ -17,6 +17,20 @@ describe Word do
     it "should take 'reversible' and return 'ible'" do
       expect(described_class.suffix("reversible")).to eq("ible")
     end
+  end
+
+  describe ".root" do
+    it "should take 'absoluteness' and return 'absolute'" do
+      expect(described_class.root("absoluteness")).to eq("absolute")
+    end
+
+    it "should take 'absolutely' and return 'absolute'" do
+      expect(described_class.root("absolutely")).to eq("absolute")
+    end
+
+    it "should take 'reversible' and return 'reverse'" do
+      expect(described_class.root("reversible")).to eq("reverse")
+    end
 
   end
 
