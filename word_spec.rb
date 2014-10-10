@@ -35,3 +35,4 @@ describe Word do
   end
 
 end
+

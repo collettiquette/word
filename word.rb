@@ -22,9 +22,7 @@ class Word
   private
 
   def find_suffix
-    likely_suffix = ""
-    SUFFIXES.each { |s| likely_suffix = s if @word.end_with?(s) }
-    likely_suffix
+    SUFFIXES.select { |s| @word.end_with?(s) }.first
   end
 
   def find_root
@@ -33,3 +31,4 @@ class Word
   end
 
 end
+
